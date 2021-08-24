@@ -1,0 +1,18 @@
+gradle/
+node_modules/
+bin/
+build/
+out/
+.idea/
+.gradle/
+.settings/
+.classpath
+.project
+.DS_Store
+SpecRunner.html
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
