@@ -6,9 +6,9 @@ import {Component, ViewChild} from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild('offcanvascollapse') offcanvascollapse: any;
+  @ViewChild('offcanvas') offcanvas: any;
 
   toggle() {
-    this.offcanvascollapse.nativeElement.classList.toggle('open');
+    this.offcanvas.nativeElement.classList.toggle('open');
   }
 }
