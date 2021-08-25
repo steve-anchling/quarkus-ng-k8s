@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'client-root',
@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'stock-client';
-  status: boolean = false;
-  clickEvent(){
-    this.status = !this.status;
+  @ViewChild('offcanvascollapse') offcanvascollapse: any;
+
+  toggle() {
+    this.offcanvascollapse.nativeElement.classList.toggle('open');
   }
 }
