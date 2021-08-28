@@ -23,6 +23,7 @@
             ],
             "styles": ["apps/stock-client/src/styles.scss"],
             "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
