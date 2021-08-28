@@ -6,39 +6,9 @@ body {
   padding-top: $navbar-padding-y + $nav-link-height + $navbar-padding-y;
 }
 
-.btn-circle {
-  width: 30px;
-  height: 30px;
-  padding: 6px 0px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.42857;
-}
-
-.btn-circle.btn-lg2 {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px;
-}
-
-.btn-circle.btn-lg {
-  width: 45px;
-  height: 45px;
-  padding: 11px 13px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px;
-}
-
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 24px;
-  line-height: 1.33;
+// Hide html5 date icon
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
