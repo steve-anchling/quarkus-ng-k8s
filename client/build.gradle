@@ -1,0 +1,18 @@
+plugins {
+  id "com.github.node-gradle.node" version "${nodeGradlePluginVersion}"
+}
+
+apply plugin: 'java'
+
+task buildClient(type: NpmTask) {
+  dependsOn npmInstall
+  args = ['run', 'build', 'usrmgmt-client', '--prod']
+}
+
+build.dependsOn buildClient
+
+// Clean task
+task removeDist(type: Delete) {
+  delete "dist"
+}
+clean.dependsOn removeDist
