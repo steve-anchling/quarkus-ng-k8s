@@ -6,7 +6,7 @@ apply plugin: 'java'
 
 task buildClient(type: NpmTask) {
   dependsOn npmInstall
-  args = ['run', 'build', 'usrmgmt-client', '--prod']
+  args = ['run', 'build', 'usermgmt-client', '--prod']
 }
 
 build.dependsOn buildClient

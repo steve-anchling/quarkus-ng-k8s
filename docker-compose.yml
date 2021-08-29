@@ -1,0 +1,8 @@
+version: '3'
+services:
+  usermgmt-client:
+    image: client
+    build:
+      context: ./client
+    ports:
+      - "4200:80"
