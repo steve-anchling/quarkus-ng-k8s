@@ -27,12 +27,12 @@
     ]
   },
   "projects": {
-    "stock-client": {
+    "usermgmt-client": {
       "tags": []
     },
-    "stock-client-e2e": {
+    "usermgmt-client-e2e": {
       "tags": [],
-      "implicitDependencies": ["stock-client"]
+      "implicitDependencies": ["usermgmt-client"]
     }
   }
 }

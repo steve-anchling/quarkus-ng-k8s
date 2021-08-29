@@ -1,27 +1,27 @@
 {
   "version": 1,
   "projects": {
-    "stock-client": {
+    "usermgmt-client": {
       "projectType": "application",
-      "root": "apps/stock-client",
-      "sourceRoot": "apps/stock-client/src",
+      "root": "apps/usermgmt-client",
+      "sourceRoot": "apps/usermgmt-client/src",
       "prefix": "client",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/stock-client",
-            "index": "apps/stock-client/src/index.html",
-            "main": "apps/stock-client/src/main.ts",
-            "polyfills": "apps/stock-client/src/polyfills.ts",
-            "tsConfig": "apps/stock-client/tsconfig.app.json",
+            "outputPath": "dist/apps/usermgmt-client",
+            "index": "apps/usermgmt-client/src/index.html",
+            "main": "apps/usermgmt-client/src/main.ts",
+            "polyfills": "apps/usermgmt-client/src/polyfills.ts",
+            "tsConfig": "apps/usermgmt-client/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "apps/stock-client/src/favicon.ico",
-              "apps/stock-client/src/assets"
+              "apps/usermgmt-client/src/favicon.ico",
+              "apps/usermgmt-client/src/assets"
             ],
-            "styles": ["apps/stock-client/src/styles.scss"],
+            "styles": ["apps/usermgmt-client/src/styles.scss"],
             "scripts": [
               "node_modules/@fortawesome/fontawesome-free/js/all.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -43,8 +43,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/stock-client/src/environments/environment.ts",
-                  "with": "apps/stock-client/src/environments/environment.prod.ts"
+                  "replace": "apps/usermgmt-client/src/environments/environment.ts",
+                  "with": "apps/usermgmt-client/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "stock-client:build:production"
+              "browserTarget": "usermgmt-client:build:production"
             },
             "development": {
-              "browserTarget": "stock-client:build:development"
+              "browserTarget": "usermgmt-client:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,50 +75,50 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "stock-client:build"
+            "browserTarget": "usermgmt-client:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/stock-client/src/**/*.ts",
-              "apps/stock-client/src/**/*.html"
+              "apps/usermgmt-client/src/**/*.ts",
+              "apps/usermgmt-client/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/stock-client"],
+          "outputs": ["coverage/apps/usermgmt-client"],
           "options": {
-            "jestConfig": "apps/stock-client/jest.config.js",
+            "jestConfig": "apps/usermgmt-client/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "stock-client-e2e": {
-      "root": "apps/stock-client-e2e",
-      "sourceRoot": "apps/stock-client-e2e/src",
+    "usermgmt-client-e2e": {
+      "root": "apps/usermgmt-client-e2e",
+      "sourceRoot": "apps/usermgmt-client-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/stock-client-e2e/cypress.json",
-            "tsConfig": "apps/stock-client-e2e/tsconfig.e2e.json",
-            "devServerTarget": "stock-client:serve:development"
+            "cypressConfig": "apps/usermgmt-client-e2e/cypress.json",
+            "tsConfig": "apps/usermgmt-client-e2e/tsconfig.e2e.json",
+            "devServerTarget": "usermgmt-client:serve:development"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "stock-client:serve:production"
+              "devServerTarget": "usermgmt-client:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/stock-client-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/usermgmt-client-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -154,5 +154,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "stock-client"
+  "defaultProject": "usermgmt-client"
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'stock-client',
+  displayName: 'usermgmt-client',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/stock-client',
+  coverageDirectory: '../../coverage/apps/usermgmt-client',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },
