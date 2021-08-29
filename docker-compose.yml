@@ -6,3 +6,12 @@ services:
       context: ./client
     ports:
       - "4200:80"
+  db-test:
+    image: postgres
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: quarkusdb

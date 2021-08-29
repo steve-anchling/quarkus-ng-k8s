@@ -9,3 +9,4 @@ pluginManagement {
 }
 
 include 'client'
+include 'usermgmt-server'
