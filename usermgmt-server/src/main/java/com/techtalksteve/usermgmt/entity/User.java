@@ -16,10 +16,11 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "USER_MGMT")
 @Getter
 @Setter
 @ToString(callSuper=true)
@@ -44,7 +45,7 @@ public class User implements Serializable {
 
     @NotNull
     @Column(name = "BIRTHDATE")
-    private OffsetDateTime birthdate;
+    private LocalDate birthdate;
 
 
 }

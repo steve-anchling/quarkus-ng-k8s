@@ -11,3 +11,5 @@ quarkus:
       generation: drop-and-create
     sql-load-script:
       import.sql
+    log:
+      sql: true

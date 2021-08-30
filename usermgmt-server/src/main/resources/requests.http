@@ -1,0 +1,32 @@
+### GET all
+GET http://localhost:8080/api/user/management/all
+Accept: application/json
+
+### GET with id 1
+GET http://localhost:8080/api/user/management/1
+Accept: application/json
+
+### Save new User
+POST http://localhost:8080/api/user/management/save
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "birthdate": "1984-03-05"
+}
+
+### Save new User
+POST http://localhost:8080/api/user/management/save
+Content-Type: application/json
+
+{
+  "id": "4",
+  "firstname": "John",
+  "lastname": "Doe",
+  "birthdate": "1984-03-06"
+}
+
+### Save new User
+DELETE http://localhost:8080/api/user/management/4
+Accept: application/json
