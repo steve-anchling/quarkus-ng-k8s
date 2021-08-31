@@ -6,7 +6,8 @@ import {EditComponent} from "./edit/edit.component";
 const routes: Routes = [
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: 'edit/:id', component: EditComponent },
-  { path: 'list', component: ListComponent }
+  { path: 'list', component: ListComponent },
+  { path: 'create', component: EditComponent}
 ];
 
 @NgModule({
