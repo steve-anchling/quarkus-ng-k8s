@@ -1,15 +1,15 @@
 <form (ngSubmit)="submit()">
   <div class="m-3">
     <div class="form-floating row mb-3">
-      <input type="text" class="form-control" id="firstname" [value]="model.firstname">
+      <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="model.firstname">
       <label for="firstname">Firstname</label>
     </div>
     <div class="form-floating row mb-3">
-      <input type="text" class="form-control" id="lastname" [value]="model.lastname">
+      <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="model.lastname">
       <label for="lastname">Lastname</label>
     </div>
     <div class="form-floating row mb-3">
-      <input type="date" class="form-control date-input" id="birthdate" [value]="model.birthdate">
+      <input type="date" class="form-control date-input" id="birthdate" name="birthdate" [(ngModel)]="model.birthdate">
       <label for="birthdate">Birthdate</label>
     </div>
     <div class="text-center">

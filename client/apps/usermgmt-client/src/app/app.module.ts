@@ -11,9 +11,10 @@ import {DeleteModalComponent} from './delete-modal/delete-modal.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ModalModule} from "ngx-bootstrap/modal";
 import {FormsModule} from "@angular/forms";
+import {ToastComponent} from './toast/toast.component';
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, EditComponent, NavigationComponent, DeleteModalComponent],
+  declarations: [AppComponent, ListComponent, EditComponent, NavigationComponent, DeleteModalComponent, ToastComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,7 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
 import {UserModel} from "../model/User";
 import {ActivatedRoute} from "@angular/router";
 import {UserMgmtService} from "../service/user-mgmt.service";
+import {Toast} from 'bootstrap'
+import {ToastComponent} from "../toast/toast.component";
+import {NotificationService} from "../service/notification.service";
 
 @Component({
   selector: 'client-edit',
@@ -10,8 +13,10 @@ import {UserMgmtService} from "../service/user-mgmt.service";
 })
 export class EditComponent implements OnInit {
   model: UserModel = new UserModel()
+  @ViewChild(ToastComponent) toastComponent: ToastComponent;
 
   constructor(private route: ActivatedRoute,
+              public notificationService: NotificationService,
               private userMgmtService: UserMgmtService) {
   }
 
@@ -29,8 +34,7 @@ export class EditComponent implements OnInit {
   submit() {
     this.userMgmtService.save(this.model)
       .subscribe(result => {
-        console.log('saved')
+        this.notificationService.notifySuccess('The user has been saved successfully');
       });
   }
-
 }
