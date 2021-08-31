@@ -6,8 +6,11 @@
     <div class="col-auto">
       <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1"><i class="fa fa-edit"></i>
       </button>
-      <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1"><i class="fa fa-trash"></i>
+      <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        <i class="fa fa-trash"></i>
       </button>
     </div>
   </div>
 </div>
+
+<client-delete-modal [id]="'deleteModal'"></client-delete-modal>

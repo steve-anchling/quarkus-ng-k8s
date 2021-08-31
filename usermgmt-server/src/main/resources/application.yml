@@ -13,3 +13,8 @@ quarkus:
       import.sql
     log:
       sql: true
+  http:
+    cors:
+      ~: true
+      methods: "*"
+      origins: "*"
