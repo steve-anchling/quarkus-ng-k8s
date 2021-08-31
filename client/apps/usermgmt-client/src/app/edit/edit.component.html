@@ -1,4 +1,4 @@
-<form>
+<form (ngSubmit)="submit()">
   <div class="m-3">
     <div class="form-floating row mb-3">
       <input type="text" class="form-control" id="firstname" [value]="model.firstname">
@@ -9,7 +9,7 @@
       <label for="lastname">Lastname</label>
     </div>
     <div class="form-floating row mb-3">
-      <input type="date" class="form-control date-input" id="birthdate">
+      <input type="date" class="form-control date-input" id="birthdate" [value]="model.birthdate">
       <label for="birthdate">Birthdate</label>
     </div>
     <div class="text-center">

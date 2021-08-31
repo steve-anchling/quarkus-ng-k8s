@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserModel} from "../model/User";
 import {ActivatedRoute} from "@angular/router";
 import {UserMgmtService} from "../service/user-mgmt.service";
@@ -9,10 +9,11 @@ import {UserMgmtService} from "../service/user-mgmt.service";
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
-  model: UserModel = new UserModel();
+  model: UserModel = new UserModel()
 
   constructor(private route: ActivatedRoute,
-              private userMgmtService: UserMgmtService) { }
+              private userMgmtService: UserMgmtService) {
+  }
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
@@ -23,6 +24,13 @@ export class EditComponent implements OnInit {
           this.model = result;
         });
     }
+  }
+
+  submit() {
+    this.userMgmtService.save(this.model)
+      .subscribe(result => {
+        console.log('saved')
+      });
   }
 
 }

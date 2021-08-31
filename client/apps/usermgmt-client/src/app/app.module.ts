@@ -10,7 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {DeleteModalComponent} from './delete-modal/delete-modal.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ModalModule} from "ngx-bootstrap/modal";
-
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent, ListComponent, EditComponent, NavigationComponent, DeleteModalComponent],
@@ -19,6 +19,7 @@ import {ModalModule} from "ngx-bootstrap/modal";
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     ModalModule.forRoot()
   ],
   providers: [],
