@@ -4,13 +4,12 @@
       <h5 class="card-body text-muted mb-2 pl-0">{{item.lastname}}, {{item.firstname}}</h5>
     </div>
     <div class="col-auto">
-      <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1"><i class="fa fa-edit"></i>
+      <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1" [routerLink]="['../edit', item.id]">
+        <i class="fa fa-edit"></i>
       </button>
-      <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1" data-bs-toggle="modal" data-bs-target="#deleteModal">
+      <button type="button" class="btn btn-outline-primary btn-circle btn-lg m-1" (click)="delete(item)">
         <i class="fa fa-trash"></i>
       </button>
     </div>
   </div>
 </div>
-
-<client-delete-modal [id]="'deleteModal'"></client-delete-modal>

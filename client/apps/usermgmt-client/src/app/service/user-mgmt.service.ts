@@ -7,7 +7,7 @@ import {UserModel} from "../model/User";
 @Injectable({
   providedIn: 'root'
 })
-export class UsermgmtService {
+export class UserMgmtService {
   private API = environment.apiUrl + 'api/user/management';
 
   constructor(private http: HttpClient) { }
@@ -20,8 +20,8 @@ export class UsermgmtService {
     return this.http.get(this.API + '/' + id);
   }
 
-  delete(id: string): Observable<any> {
-    return this.http.delete(this.API + '/delete/' + id);
+  delete(id: number): Observable<any> {
+    return this.http.delete(this.API + '/' + id);
   }
 
   save(model: UserModel): Observable<any> {

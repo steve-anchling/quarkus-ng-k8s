@@ -1,16 +1,12 @@
 <form>
   <div class="m-3">
     <div class="form-floating row mb-3">
-      <input type="text" class="form-control" id="firstname">
+      <input type="text" class="form-control" id="firstname" [value]="model.firstname">
       <label for="firstname">Firstname</label>
     </div>
     <div class="form-floating row mb-3">
-      <input type="text" class="form-control" id="lastname">
+      <input type="text" class="form-control" id="lastname" [value]="model.lastname">
       <label for="lastname">Lastname</label>
-    </div>
-    <div class="form-floating row mb-3">
-      <input type="email" class="form-control" id="emailAddress">
-      <label for="emailAddress">Email Address</label>
     </div>
     <div class="form-floating row mb-3">
       <input type="date" class="form-control date-input" id="birthdate">

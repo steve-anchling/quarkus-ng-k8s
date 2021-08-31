@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {BsModalRef} from "ngx-bootstrap/modal";
 
 @Component({
   selector: 'client-delete-modal',
@@ -7,12 +8,21 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class DeleteModalComponent implements OnInit {
 
-  @Input("id")
-  id: string;
+  text: string = '';
+  public event: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
+  }
+
+  delete() {
+    this.event.emit();
+    this.close();
+  }
+
+  close() {
+    this.bsModalRef.hide();
   }
 
 }

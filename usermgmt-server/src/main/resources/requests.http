@@ -16,7 +16,7 @@ Content-Type: application/json
   "birthdate": "1984-03-05"
 }
 
-### Save new User
+### Save existing User
 POST http://localhost:8080/api/user/management/save
 Content-Type: application/json
 
@@ -27,6 +27,6 @@ Content-Type: application/json
   "birthdate": "1984-03-06"
 }
 
-### Save new User
+### Delete User
 DELETE http://localhost:8080/api/user/management/4
 Accept: application/json

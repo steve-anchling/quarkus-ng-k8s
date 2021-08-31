@@ -1,6 +1,7 @@
 $primary: green;
-@import "~bootstrap/scss/bootstrap";
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~bootstrap/scss/bootstrap";
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
 
 body {
   padding-top: $navbar-padding-y + $nav-link-height + $navbar-padding-y;
