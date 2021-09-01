@@ -17,7 +17,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "USER_MGMT")
@@ -46,6 +45,4 @@ public class User implements Serializable {
     @NotNull
     @Column(name = "BIRTHDATE")
     private LocalDate birthdate;
-
-
 }
