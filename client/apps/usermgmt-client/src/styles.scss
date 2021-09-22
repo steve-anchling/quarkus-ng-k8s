@@ -4,7 +4,7 @@ $primary: green;
 @import "~ngx-bootstrap/datepicker/bs-datepicker";
 
 body {
-  padding-top: $navbar-padding-y + $nav-link-height + $navbar-padding-y;
+  padding-top: 10px;
 }
 
 // Hide html5 date icon

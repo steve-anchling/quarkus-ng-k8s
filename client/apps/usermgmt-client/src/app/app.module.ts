@@ -4,7 +4,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {ListComponent} from './list/list.component';
 import {EditComponent} from './edit/edit.component';
-import {NavigationComponent} from './navigation/navigation.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import {DeleteModalComponent} from './delete-modal/delete-modal.component';
@@ -14,7 +13,7 @@ import {FormsModule} from "@angular/forms";
 import {ToastComponent} from './toast/toast.component';
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, EditComponent, NavigationComponent, DeleteModalComponent, ToastComponent],
+  declarations: [AppComponent, ListComponent, EditComponent, DeleteModalComponent, ToastComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

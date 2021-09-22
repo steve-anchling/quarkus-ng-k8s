@@ -11,7 +11,7 @@ task buildClient(type: NpmTask) {
 
 build.dependsOn buildClient
 
-// Clean task
+// Clean taskF
 task removeDist(type: Delete) {
   delete "dist"
 }
