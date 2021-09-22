@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserModel} from "../model/User";
 import {ActivatedRoute} from "@angular/router";
-import {UserMgmtService} from "../service/user-mgmt.service";
+import {UsermgmtService} from "../service/usermgmt.service";
 import {NotificationService} from "../service/notification.service";
 
 @Component({
@@ -14,7 +14,7 @@ export class EditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               public notificationService: NotificationService,
-              private userMgmtService: UserMgmtService) {
+              private userMgmtService: UsermgmtService) {
   }
 
   ngOnInit(): void {

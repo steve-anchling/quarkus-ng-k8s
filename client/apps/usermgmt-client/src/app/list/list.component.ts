@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserMgmtService} from "../service/user-mgmt.service";
+import {UsermgmtService} from "../service/usermgmt.service";
 import {UserModel} from "../model/User";
 import {BsModalRef, BsModalService} from "ngx-bootstrap/modal";
 import {DeleteModalComponent} from "../delete-modal/delete-modal.component";
@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
   users: UserModel[] = [];
   bsModalRef: BsModalRef;
 
-  constructor(private service: UserMgmtService,
+  constructor(private service: UsermgmtService,
               private modalService: BsModalService) { }
 
   ngOnInit(): void {
