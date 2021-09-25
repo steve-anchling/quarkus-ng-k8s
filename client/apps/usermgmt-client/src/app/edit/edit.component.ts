@@ -13,7 +13,7 @@ export class EditComponent implements OnInit {
   model: UserModel = new UserModel()
 
   constructor(private route: ActivatedRoute,
-              public notificationService: NotificationService,
+              private notificationService: NotificationService,
               private userMgmtService: UsermgmtService) {
   }
 
