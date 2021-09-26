@@ -2,11 +2,9 @@ plugins {
   id "com.github.node-gradle.node" version "${nodeGradlePluginVersion}"
 }
 
-apply plugin: 'java'
-
 task buildClient(type: NpmTask) {
   dependsOn npmInstall
-  args = ['run', 'build', 'usermgmt-client', '--prod']
+  args = ['run', 'build', 'usermgmt-client', '--prod',  '--', '--base-href=/usermgmt/']
 }
 
 build.dependsOn buildClient
